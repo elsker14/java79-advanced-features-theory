@@ -1,4 +1,4 @@
-package com.javaremotero79.part1_class_types;
+package com.javaremotero79.part1_class_types.class_object_concrete;
 
 /*
     Ce este?
