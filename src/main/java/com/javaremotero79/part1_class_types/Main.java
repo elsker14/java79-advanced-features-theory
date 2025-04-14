@@ -3,8 +3,12 @@ package com.javaremotero79.part1_class_types;
 import com.javaremotero79.part1_class_types.class_abstract.AbstractAnimal;
 import com.javaremotero79.part1_class_types.class_abstract.Bird;
 import com.javaremotero79.part1_class_types.class_abstract.Dog;
+import com.javaremotero79.part1_class_types.class_interface.Crocodile;
 import com.javaremotero79.part1_class_types.class_interface.InterfaceAnimal;
+import com.javaremotero79.part1_class_types.class_interface.Parrot;
 import com.javaremotero79.part1_class_types.class_object_concrete.ConcreteAnimal;
+
+import java.awt.*;
 
 public class Main {
 
@@ -32,6 +36,20 @@ public class Main {
         System.out.println();
 
         /* Interface  */
+        System.out.println("Afisari din interfata si clase de implementare: ");
+        InterfaceAnimal animalObject1 = new Crocodile();
+        // e relevant in cazul in care avem o relatie unica de implementare
+        // o unica interfata e implementata de o clasa de implementare
+        // o clasa de implementare implementeaza O SINGURA interfata unica
+        Crocodile crocodileObject = new Crocodile();
+        animalObject1.doSound();
+        crocodileObject.doSound();
+
+        InterfaceAnimal animalObject2 = new Parrot();
+        Parrot parrotObject = new Parrot();
+        animalObject2.doSound();
+        parrotObject.doSound();
+        System.out.println();
 
         /** Clase Anonime */
         // Putem instatia obiecte de tipul unei clase abstracte?
@@ -55,8 +73,6 @@ public class Main {
         // unei clase anonime de moment folosind o expresie lamba neparametrizata.
         // Insa, dpdv sintatic, nu putem instantia obiecte de tipul unei interfete ptc intr-o interfata nu
         // putem crea constructori.
-        InterfaceAnimal interfaceAnimalObject = () -> {
-
-        };
+        InterfaceAnimal interfaceAnimalObject;
     }
 }
