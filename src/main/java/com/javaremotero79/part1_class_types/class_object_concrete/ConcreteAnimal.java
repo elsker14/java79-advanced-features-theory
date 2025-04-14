@@ -33,6 +33,10 @@ public class ConcreteAnimal {
     private int varsta;
 
     // constructori
+    public ConcreteAnimal() {
+
+    }
+
     public ConcreteAnimal(String rasa, int varsta) {
         this.rasa = rasa;
         this.varsta = varsta;

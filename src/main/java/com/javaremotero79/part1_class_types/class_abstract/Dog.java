@@ -4,6 +4,6 @@ public class Dog extends AbstractAnimal {
 
     @Override
     public void makeSound() {
-        System.out.println("Woof!");
+        System.out.println("Woof din sub-clasa Dog!");
     }
 }
