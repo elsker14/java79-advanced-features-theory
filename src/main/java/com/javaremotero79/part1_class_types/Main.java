@@ -2,6 +2,8 @@ package com.javaremotero79.part1_class_types;
 
 import com.javaremotero79.part1_class_types.class_abstract.Bird;
 import com.javaremotero79.part1_class_types.class_abstract.Dog;
+import com.javaremotero79.part1_class_types.class_enum.AccessRole;
+import com.javaremotero79.part1_class_types.class_enum.Day;
 import com.javaremotero79.part1_class_types.class_final.BankAccount;
 import com.javaremotero79.part1_class_types.class_final.MathUtils;
 import com.javaremotero79.part1_class_types.class_interface.Crocodile;
@@ -66,5 +68,21 @@ public class Main {
 
         BankAccount bankAccount = new BankAccount("123124");
         bankAccount.display();
+        System.out.println();
+
+        /* Enum Class */
+        Day dayOne = Day.LUNI;
+        Day dayThree = Day.MIERCURI;
+        Day daySix = Day.SAMBATA;
+        System.out.println(dayOne + " " + dayOne.ordinal());
+        System.out.println(dayThree + " " + dayThree.ordinal());
+        System.out.println(daySix + " " + daySix.ordinal());
+        System.out.println();
+
+        AccessRole newRole = AccessRole.ADMIN;
+        System.out.println(newRole.getPriority() + " " + newRole.getAccessLevel());
+
+//        AccessRole otherTole = new AccessRole("wow", 0);      // -> utilizati final class, altfel primiti pre compile error
+//        AccessRole otherTole = AccessRole("wow", 0);          // -> utilizati final class, altfel primiti pre compile error
     }
 }
