@@ -2,6 +2,8 @@ package com.javaremotero79.part1_class_types;
 
 import com.javaremotero79.part1_class_types.class_abstract.Bird;
 import com.javaremotero79.part1_class_types.class_abstract.Dog;
+import com.javaremotero79.part1_class_types.class_final.BankAccount;
+import com.javaremotero79.part1_class_types.class_final.MathUtils;
 import com.javaremotero79.part1_class_types.class_interface.Crocodile;
 import com.javaremotero79.part1_class_types.class_interface.InterfaceAnimal;
 import com.javaremotero79.part1_class_types.class_interface.Parrot;
@@ -54,5 +56,15 @@ public class Main {
         electricCar.displayStatus();
         electricCar.chargeBattery();
         electricCar.navigateTo("Suceava");
+        System.out.println();
+
+        /* Final Class */
+        MathUtils mathUtils = new MathUtils();
+        System.out.println(mathUtils.CONSTANT_TEXT);
+//        mathUtils.CONSTANT_TEXT = "Alune";  -> Cannot assign a value to final variable 'CONSTANT_TEXT'
+//        MathUtils.MAX_VALUE = 98; -> Cannot assign a value to final variable 'MAX_VALUE'
+
+        BankAccount bankAccount = new BankAccount("123124");
+        bankAccount.display();
     }
 }
