@@ -1,5 +1,7 @@
 package com.javaremotero79.part2_oop_principles;
 
+import com.javaremotero79.part2_oop_principles.composition.Car;
+import com.javaremotero79.part2_oop_principles.composition.Engine;
 import com.javaremotero79.part2_oop_principles.encapsulation.UserAccount;
 import com.javaremotero79.part2_oop_principles.inheritance.Chef;
 import com.javaremotero79.part2_oop_principles.inheritance.Employee;
@@ -39,8 +41,16 @@ public class Main {
         developer.work();
         frontEndDev.work();
 
-        System.out.println(developer.add(4,4));
-        System.out.println(developer.add(4.2,4));
-        System.out.println(developer.add(1241414124,-1231414122));
+        System.out.println(developer.add(4, 4));
+        System.out.println(developer.add(4.2, 4));
+        System.out.println(developer.add(12414141241214L, -12314141222141L));
+        System.out.println();
+
+        /* Composition */
+        Engine engine = new Engine(34, "mare rau");
+        Car car = new Car(engine, "WV", "Golf 7", "B123WOW");
+
+        System.out.println(engine);
+        System.out.println(car);
     }
 }
