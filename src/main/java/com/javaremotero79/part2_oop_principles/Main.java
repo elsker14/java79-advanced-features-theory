@@ -1,6 +1,9 @@
 package com.javaremotero79.part2_oop_principles;
 
 import com.javaremotero79.part2_oop_principles.encapsulation.UserAccount;
+import com.javaremotero79.part2_oop_principles.inheritance.Chef;
+import com.javaremotero79.part2_oop_principles.inheritance.Employee;
+import com.javaremotero79.part2_oop_principles.inheritance.Waiter;
 
 public class Main {
 
