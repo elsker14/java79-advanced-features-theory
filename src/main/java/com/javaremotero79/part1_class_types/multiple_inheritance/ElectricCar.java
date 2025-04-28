@@ -1,7 +1,5 @@
 package com.javaremotero79.part1_class_types.multiple_inheritance;
 
-import javax.swing.plaf.basic.BasicTextAreaUI;
-
 /* ElectricCar se va comporta cu un dublu rol:
  * va fi o clasa de implementare pt cele 2 interfete, ElectrySystem si NavigationSystem
  * va fi o sub-clasa a clasei parinte GenericVehicle
