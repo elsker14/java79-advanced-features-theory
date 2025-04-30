@@ -55,6 +55,19 @@ public class TreeSetExample {
 
             return result;
         }
+
+        /*
+            Comparatia prin Comparable se face in momentul in care initializam TreeSet.
+            SortedSet <Animal> setAnimals = new TreeSet();
+            setAnimals.add(new Animal(...));    => in momentul in care introducem o noua valoare in set, se activeaza compareTo
+            currentObj = new Animal(...).
+            currentObj.comparTo(otherObj);
+            otherObj pe rand este fiecare element din set.
+            result trece prin 3 stari:
+            - result < 0
+            - result = 0
+            - result > 0
+         */
     }
 
     static class AnimalComparator {
