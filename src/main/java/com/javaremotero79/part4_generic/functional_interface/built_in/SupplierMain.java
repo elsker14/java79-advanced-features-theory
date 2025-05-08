@@ -33,6 +33,13 @@ public class SupplierMain {
 
     public static void main(String[] args) {
         Supplier<String> sayHello = () -> "Hello!";
+        Supplier<String> processTestDataForAcceptanceSuite = () -> {
+            // get data from file
+            String path = "/src/main/resources/data";
+            // stocarea datelor in obiect
+            return "";
+        };
+        String sayHello2 = "Hello!";
         System.out.println(sayHello.get());
 
         Supplier<Integer> generateRandom = () -> {
@@ -48,5 +55,8 @@ public class SupplierMain {
                 List.of("Aur", "Argint", "Bronze")
         );
         System.out.println(athleteSupplier.get());
+
+
+        System.out.println(processTestDataForAcceptanceSuite.get());
     }
 }

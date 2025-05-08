@@ -8,6 +8,7 @@ package com.javaremotero79.part4_generic.functional_interface.built_in;
 
 import java.util.List;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class PredicateMain {
 
@@ -35,6 +36,18 @@ public class PredicateMain {
         System.out.println(isPrime.test(13));
         System.out.println(isPrime.test(7));
         System.out.println(isPrime.test(8));
+
+        Predicate<Integer> isEven = nr -> nr % 2 == 0;
+        for(Integer it: numbers) {
+            if(isEven.test(it)) {
+                System.out.print(it + " ");
+            }
+        }
+
+        List<Integer> evenNumbers = numbers
+                .stream()
+                .filter(n -> n % 2 == 0)
+                .collect(Collectors.toList());
     }
 
     private static boolean checkPrimeNumber(int number) {
